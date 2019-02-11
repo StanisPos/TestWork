@@ -1,0 +1,14 @@
+hr {
+  margin: 70px 0;
+  border: 5px dashed darkorchid;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

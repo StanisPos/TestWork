@@ -2,12 +2,62 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/constants.js" as="script">
+    <link rel="preload" href="js/canvas.js" as="script">
+    <link rel="preload" href="js/centering.js" as="script">
+    <link rel="preload" href="js/backend.js" as="script">
+    <link rel="preload" href="js/data.js" as="script">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <title>Тест</title>
   </head>
   <body>
 
-    <canvas id="canvas"></canvas>
+    <main>
 
+      <section class="canvas__wrapper">
+        <canvas class="canvas"></canvas>
+        <div class="canvas__container">
+          <button class="canvas__button  button">Нарисовать</button>
+          <button class="canvas__button  canvas__button--reset  visually-hidden">Сброс</button>
+        </div>
+      </section>
+
+      <hr/>
+
+      <section class="data">
+        <button class="data__button  button">Сгенерировать</button>
+      </section>
+
+      <hr/>
+
+      <section class="centering">
+        <ul class="centering__list">
+          <li class="centering__item-title">CSS</li>
+          <li class="centering__item-title">JS</li>
+          <li class="centering__item-title">HTML</li>
+        </ul>
+        <ul class="centering__list">
+          <li class="centering__item">
+            <div class="centering__child  centering__child--first"></div>
+          </li>
+          <li class="centering__item">
+            <div class="centering__child  centering__child--second"></div>
+          </li>
+          <li class="centering__item"  style="position: relative">
+            <div class="centering__child  centering__child--third" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)"></div>
+          </li>
+        </ul>
+      </section>
+
+      <hr/>
+
+    </main>
+
+    <script src="js/constants.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/centering.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/data.js"></script>
   </body>
 </html>

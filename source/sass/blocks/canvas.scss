@@ -1,0 +1,47 @@
+.canvas__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 680px;
+}
+
+.canvas {
+  border-radius: 8%;
+
+  background-color: hsl(180, 100%, 90%);
+}
+
+.canvas__container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-left: 200px;
+}
+
+.canvas__button {
+  padding: 15px 50px;
+
+  background-color: #33ffff;
+
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(78, 72, 72);
+
+  cursor: pointer;
+
+  outline: none;
+
+  &--reset {
+    padding: 5px 25px;
+
+    background-color: #9ef5f5;
+  }
+
+  &:hover {
+    background-color: #99ffff;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

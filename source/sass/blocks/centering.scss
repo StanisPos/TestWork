@@ -1,0 +1,36 @@
+.centering__list {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0;
+  margin: 0 auto;
+
+  list-style-type: none;
+}
+
+.centering__item {
+  width: 200px;
+  height: 200px;
+
+  vertical-align: middle;
+
+  background-color: orange;
+
+  &:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.centering__item-title {
+  @include font(18px, 18px, "Arial");
+  font-weight: bold;
+}
+
+.centering__child {
+  width: 20px;
+  height: 20px;
+
+  background-color: red;
+}
