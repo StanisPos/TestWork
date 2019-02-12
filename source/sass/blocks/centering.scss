@@ -1,11 +1,15 @@
 .centering__list {
+  @include list-reset;
+
   display: flex;
   justify-content: space-between;
   width: 90vw;
-  margin: 0;
-  @include list-reset;
-
+  margin: 0 auto;
   list-style-type: none;
+
+  &:first-of-type {
+    width: 80vw;
+  }
 }
 
 .centering__item {

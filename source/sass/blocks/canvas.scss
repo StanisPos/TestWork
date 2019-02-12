@@ -22,19 +22,42 @@
 .canvas__button {
   padding: 15px 50px;
 
-  background-color: #33ffff;
+  background-color: #eefcfc;
 
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px rgb(78, 72, 72);
+  border: 1px solid black;
+  box-shadow: 0 0 0 1px rgb(141, 141, 141);
 
   cursor: pointer;
 
   outline: none;
 
   &--reset {
+    position: relative;
+
     padding: 5px 25px;
 
     background-color: #9ef5f5;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      height: 33px;
+      width: 3px;
+
+      background-color: #333333;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
   }
 
   &:hover {

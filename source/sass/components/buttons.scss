@@ -1,7 +1,22 @@
 .button {
   @include font (24px, 24px, "Arial");
 
-  border: none;
-  background: none;
+  padding: 15px 50px;
+
+  background-color: #eefcfc;
+
+  border: 1px solid black;
+  box-shadow: 0 0 0 1px rgb(141, 141, 141);
+
+  cursor: pointer;
+
   outline: none;
+
+  &:hover {
+    background-color: #99ffff;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
 }
