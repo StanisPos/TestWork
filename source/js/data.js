@@ -42,14 +42,12 @@
   var onSuccess = function(data) {
     popup.classList.remove('visually-hidden');
     getData(data[window.common.getRandomNumber(0, data.length)]);
-    dataButton.disabled = true;
-    console.log(popup.children);
-
   };
 
   dataButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     window.backend.load(onSuccess, onError);
+    dataButton.disabled = true;
   });
 
   popupClose.addEventListener('click', function(evt) {
@@ -60,5 +58,16 @@
     }
     dataButton.disabled = false;
   });
+
+  document.addEventListener('keydown', function(evt) {
+    if(evt.keyCode === window.constants.ESC_KEY) {
+      evt.preventDefault();
+      popup.classList.add('visually-hidden');
+      for(var i = popup.children.length - 1; i > 0; i--) {
+        popup.children[i].remove();
+      }
+      dataButton.disabled = false;
+    }
+  })
 
 }) ();
