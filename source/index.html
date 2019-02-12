@@ -8,11 +8,16 @@
     <link rel="preload" href="js/centering.js" as="script">
     <link rel="preload" href="js/backend.js" as="script">
     <link rel="preload" href="js/data.js" as="script">
+    <link rel="preload" href="js/open.js" as="script">
     <link rel="preload" href="js/squares.js" as="script">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <title>Тест</title>
   </head>
   <body>
+
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <main>
 
@@ -53,6 +58,29 @@
 
       <hr/>
 
+      <section class="open">
+        <button class="open__button  button">Открыть</button>
+        <ul class="open__list">
+          <li class="open__item  open__hidden">
+            <svg>
+              <use xlink:href="#boy"></use>
+            </svg>
+          </li>
+          <li class="open__item  open__hidden">
+            <svg>
+              <use xlink:href="#man"></use>
+            </svg>
+          </li>
+          <li class="open__item  open__hidden">
+            <svg>
+              <use xlink:href="#man-2"></use>
+            </svg>
+          </li>
+        </ul>
+      </section>
+
+      <hr/>
+
       <section class="squares">
         <button class="squares__button  button">Генерировать элементы</button>
         <ul class="squares__list"></ul>
@@ -67,6 +95,7 @@
     <script src="js/centering.js"></script>
     <script src="js/backend.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/open.js"></script>
     <script src="js/squares.js"></script>
 
   </body>

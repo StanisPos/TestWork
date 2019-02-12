@@ -1,0 +1,22 @@
+.open__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 180px;
+  padding: 0 50px;
+}
+
+.open__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+
+  border: 1px solid black;
+}
+
+.open__hidden {
+  display: none;
+}
